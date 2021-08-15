@@ -8,7 +8,10 @@ app.use(express.urlencoded({
 }));
 
 const studentsRoute = require('./routes/students');
+const teachersRoute = require('./routes/teachers');
+// const modulesRoute = require('./routes/modules')
 
 app.use('/students', studentsRoute);
+app.use('/teachers', teachersRoute);
 
 module.exports = app
