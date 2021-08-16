@@ -4,7 +4,7 @@ function save(req, res){
     const modules = {
         name: req.body.name,
         coeff: req.body.coeff,
-        teacherId: 1,
+        teacherId: models.Teacher.findByPk(req.body.teacher_id),
     }
     models.Module.create(modules).then(result => {
         res.status(201).json({
